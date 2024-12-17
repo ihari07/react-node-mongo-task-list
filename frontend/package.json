@@ -11,7 +11,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!axios)/'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,7 +33,11 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
     "axios": "^1.7.9",
+    "jest": "^27.5.1",
     "react-router-dom": "^6.28.0"
   }
 }
