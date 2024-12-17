@@ -18,6 +18,8 @@ if (mongoose.connection.readyState === 0) {
     .then(() => console.log('Connected to MongoDB'))
     .catch((err) => console.error('Error connecting to MongoDB', err));
 }
+app.use('/api/auth', authRoutes);
+app.use('/api/lists', listRoutes);
 
 let server = null;
 if (process.env.NODE_ENV !== 'test') {
